@@ -96,7 +96,15 @@ func (tree *Tree) Get(key interface{}) (value interface{}, found bool) {
 	return nil, false
 }
 
-func (tree *Tree) GetClosest(key interface{}) (prev, after interface{}, found bool) {
+// GetClosest does the same as above but if the given key does not exists,
+// it tries to find the elements netx to it.
+// If the given key exist it return twice the value and found is true.
+// If the given key is between tow other keys the previous value will be first and the next at the second place.
+// If the given key is less than the first key, it returns prev as nil and next as the first value.
+// If the given key is higher than the last key, it returns prev as the last value and next as nil.
+// If empty it returns nil, nil, false.
+func (tree *Tree) GetClosest(key interface{}) (prev, next interface{}, found bool) {
+	// The first part of the function is almost a clone of tree.searchRecursively
 	if tree.Empty() {
 		return nil, nil, false
 	}
