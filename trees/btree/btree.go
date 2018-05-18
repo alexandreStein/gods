@@ -110,7 +110,10 @@ func (tree *Tree) GetClosest(key interface{}) (prev, next interface{}, found boo
 		return nil, nil, false
 	}
 
-	iterator := tree.IteratorAt(key)
+	iterator := tree.IteratorAt(key, true, false)
+	if iterator.entry == nil {
+		iterator = tree.IteratorAt(key, false, true)
+	}
 
 	if iterator.Key() == key {
 		return iterator.Value(), iterator.Value(), true
@@ -123,7 +126,7 @@ func (tree *Tree) GetClosest(key interface{}) (prev, next interface{}, found boo
 
 // IteratorAt gets the iterator at the key if found or at the start of
 // the leaf which would hold the value if present..
-func (tree *Tree) IteratorAt(key interface{}) *Iterator {
+func (tree *Tree) IteratorAt(key interface{}, betterBefore, betterAfter bool) *Iterator {
 	node := tree.Root
 	var index int
 	var found bool
@@ -154,10 +157,10 @@ func (tree *Tree) IteratorAt(key interface{}) *Iterator {
 				position: between,
 			}
 			prevKey, _, nextKey, _, _ := tree.findClosestWithIterator(key, iterator)
-			if prevKey != nil {
-				return tree.IteratorAt(prevKey)
-			} else if nextKey != nil {
-				return tree.IteratorAt(nextKey)
+			if prevKey != nil && betterBefore {
+				return tree.IteratorAt(prevKey, betterBefore, betterAfter)
+			} else if nextKey != nil && betterAfter {
+				return tree.IteratorAt(nextKey, betterBefore, betterAfter)
 			} else {
 				return iterator
 			}
