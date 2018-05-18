@@ -116,7 +116,9 @@ func (tree *Tree) GetClosest(key interface{}) (prev, next interface{}, found boo
 		return iterator.Value(), iterator.Value(), true
 	}
 
-	return tree.findClosestWithIterator(key, iterator)
+	_, prev, _, next, found = tree.findClosestWithIterator(key, iterator)
+
+	return prev, next, found
 }
 
 // IteratorAt gets the iterator at the key if found or at the start of
@@ -145,11 +147,19 @@ func (tree *Tree) IteratorAt(key interface{}) *Iterator {
 		if tree.isLeaf(node) {
 			// Build the iterator to get the value just before and after the requested
 			// key
-			return &Iterator{
+			iterator := &Iterator{
 				tree:     tree,
 				node:     node,
 				entry:    node.Entries[0],
 				position: between,
+			}
+			prevKey, _, nextKey, _, _ := tree.findClosestWithIterator(key, iterator)
+			if prevKey != nil {
+				return tree.IteratorAt(prevKey)
+			} else if nextKey != nil {
+				return tree.IteratorAt(nextKey)
+			} else {
+				return iterator
 			}
 		}
 
@@ -158,20 +168,22 @@ func (tree *Tree) IteratorAt(key interface{}) *Iterator {
 	}
 }
 
-func (tree *Tree) findClosestWithIterator(key interface{}, iterator *Iterator) (prev, next interface{}, found bool) {
+func (tree *Tree) findClosestWithIterator(key interface{}, iterator *Iterator) (prevKey, prevValue, nextKey, nextValue interface{}, found bool) {
 	// Reads given node to define the value right after the asked key.
 	for {
 		// If comparator returns a negative value, this means that
 		// the given key is after the looking key.
 		if tree.Comparator(key, iterator.Key()) < 0 {
-			next = iterator.Value()
+			nextKey = iterator.Key()
+			nextValue = iterator.Value()
 			break
 		}
 
 		// If last there is no after value but we find the value just before.
 		if !iterator.Next() {
 			iterator.Prev()
-			prev = iterator.Value()
+			prevKey = iterator.Key()
+			prevValue = iterator.Value()
 			return
 		}
 	}
@@ -180,7 +192,8 @@ func (tree *Tree) findClosestWithIterator(key interface{}, iterator *Iterator) (
 		return
 	}
 
-	prev = iterator.Value()
+	prevKey = iterator.Key()
+	prevValue = iterator.Value()
 
 	return
 }
