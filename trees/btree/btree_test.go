@@ -1140,8 +1140,8 @@ func TestBTreeClosest(t *testing.T) {
 		prev, after, found := tree.GetClosest(test.asked)
 		if found != test.exist {
 			t.Errorf("The value %d exists but should not", test.asked)
-			// } else if found {
-			// 	continue
+		} else if found {
+			continue
 		}
 
 		if test.prev == "" && prev != nil {
