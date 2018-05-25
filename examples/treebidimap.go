@@ -5,8 +5,8 @@
 package examples
 
 import (
-	"github.com/emirpasic/gods/maps/treebidimap"
-	"github.com/emirpasic/gods/utils"
+	"github.com/alexandreStein/gods/maps/treebidimap"
+	"github.com/alexandreStein/gods/utils"
 )
 
 // TreeBidiMapExample to demonstrate basic usage of TreeBidiMap

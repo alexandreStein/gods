@@ -6,7 +6,7 @@ package examples
 
 import (
 	"fmt"
-	"github.com/emirpasic/gods/trees/btree"
+	"github.com/alexandreStein/gods/trees/btree"
 )
 
 // BTreeExample to demonstrate basic usage of BTree

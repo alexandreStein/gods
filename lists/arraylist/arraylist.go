@@ -11,8 +11,8 @@ package arraylist
 
 import (
 	"fmt"
-	"github.com/emirpasic/gods/lists"
-	"github.com/emirpasic/gods/utils"
+	"github.com/alexandreStein/gods/lists"
+	"github.com/alexandreStein/gods/utils"
 	"strings"
 )
 

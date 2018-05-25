@@ -13,8 +13,8 @@ package redblacktree
 
 import (
 	"fmt"
-	"github.com/emirpasic/gods/trees"
-	"github.com/emirpasic/gods/utils"
+	"github.com/alexandreStein/gods/trees"
+	"github.com/alexandreStein/gods/utils"
 )
 
 func assertTreeImplementation() {

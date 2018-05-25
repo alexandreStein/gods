@@ -6,7 +6,7 @@ package singlylinkedlist
 
 import (
 	"fmt"
-	"github.com/emirpasic/gods/utils"
+	"github.com/alexandreStein/gods/utils"
 	"testing"
 )
 

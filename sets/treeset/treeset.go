@@ -11,9 +11,9 @@ package treeset
 
 import (
 	"fmt"
-	"github.com/emirpasic/gods/sets"
-	rbt "github.com/emirpasic/gods/trees/redblacktree"
-	"github.com/emirpasic/gods/utils"
+	"github.com/alexandreStein/gods/sets"
+	rbt "github.com/alexandreStein/gods/trees/redblacktree"
+	"github.com/alexandreStein/gods/utils"
 	"strings"
 )
 
