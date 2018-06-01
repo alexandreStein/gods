@@ -21,8 +21,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/alexandreStein/gods/trees"
-	"github.com/alexandreStein/gods/utils"
+	"github.com/alexandrestein/gods/trees"
+	"github.com/alexandrestein/gods/utils"
 )
 
 func assertTreeImplementation() {

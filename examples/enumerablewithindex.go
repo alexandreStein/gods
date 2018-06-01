@@ -6,7 +6,7 @@ package examples
 
 import (
 	"fmt"
-	"github.com/alexandreStein/gods/sets/treeset"
+	"github.com/alexandrestein/gods/sets/treeset"
 )
 
 func printSet(txt string, set *treeset.Set) {

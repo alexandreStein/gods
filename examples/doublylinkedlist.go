@@ -5,8 +5,8 @@
 package examples
 
 import (
-	dll "github.com/alexandreStein/gods/lists/doublylinkedlist"
-	"github.com/alexandreStein/gods/utils"
+	dll "github.com/alexandrestein/gods/lists/doublylinkedlist"
+	"github.com/alexandrestein/gods/utils"
 )
 
 // DoublyLinkedListExample to demonstrate basic usage of DoublyLinkedList

@@ -5,8 +5,8 @@
 package examples
 
 import (
-	sll "github.com/alexandreStein/gods/lists/singlylinkedlist"
-	"github.com/alexandreStein/gods/utils"
+	sll "github.com/alexandrestein/gods/lists/singlylinkedlist"
+	"github.com/alexandrestein/gods/utils"
 )
 
 // SinglyLinkedListExample to demonstrate basic usage of SinglyLinkedList

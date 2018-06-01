@@ -2,8 +2,8 @@ package examples
 
 import (
 	"fmt"
-	"github.com/alexandreStein/gods/lists/arraylist"
-	"github.com/alexandreStein/gods/maps/hashmap"
+	"github.com/alexandrestein/gods/lists/arraylist"
+	"github.com/alexandrestein/gods/maps/hashmap"
 )
 
 // ListSerializationExample demonstrates how to serialize and deserialize lists to and from JSON

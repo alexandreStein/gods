@@ -4,7 +4,7 @@
 
 package examples
 
-import "github.com/alexandreStein/gods/sets/hashset"
+import "github.com/alexandrestein/gods/sets/hashset"
 
 // HashSetExample to demonstrate basic usage of HashSet
 func HashSetExample() {

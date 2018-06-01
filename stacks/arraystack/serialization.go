@@ -4,7 +4,7 @@
 
 package arraystack
 
-import "github.com/alexandreStein/gods/containers"
+import "github.com/alexandrestein/gods/containers"
 
 func assertSerializationImplementation() {
 	var _ containers.JSONSerializer = (*Stack)(nil)

@@ -4,7 +4,7 @@
 
 package arraylist
 
-import "github.com/alexandreStein/gods/containers"
+import "github.com/alexandrestein/gods/containers"
 
 func assertIteratorImplementation() {
 	var _ containers.ReverseIteratorWithIndex = (*Iterator)(nil)

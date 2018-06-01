@@ -4,7 +4,7 @@
 
 package examples
 
-import "github.com/alexandreStein/gods/utils"
+import "github.com/alexandrestein/gods/utils"
 
 // SortExample to demonstrate basic usage of basic sort
 func SortExample() {

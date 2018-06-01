@@ -11,8 +11,8 @@ package arraystack
 
 import (
 	"fmt"
-	"github.com/alexandreStein/gods/lists/arraylist"
-	"github.com/alexandreStein/gods/stacks"
+	"github.com/alexandrestein/gods/lists/arraylist"
+	"github.com/alexandrestein/gods/stacks"
 	"strings"
 )
 

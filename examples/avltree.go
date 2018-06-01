@@ -6,7 +6,7 @@ package examples
 
 import (
 	"fmt"
-	avl "github.com/alexandreStein/gods/trees/avltree"
+	avl "github.com/alexandrestein/gods/trees/avltree"
 )
 
 // AVLTreeExample to demonstrate basic usage of AVLTree

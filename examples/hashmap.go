@@ -4,7 +4,7 @@
 
 package examples
 
-import "github.com/alexandreStein/gods/maps/hashmap"
+import "github.com/alexandrestein/gods/maps/hashmap"
 
 // HashMapExample to demonstrate basic usage of HashMap
 func HashMapExample() {

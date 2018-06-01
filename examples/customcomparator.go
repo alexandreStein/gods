@@ -6,7 +6,7 @@ package examples
 
 import (
 	"fmt"
-	"github.com/alexandreStein/gods/sets/treeset"
+	"github.com/alexandrestein/gods/sets/treeset"
 )
 
 // User model (id and name)

@@ -4,7 +4,7 @@
 
 package examples
 
-import "github.com/alexandreStein/gods/maps/hashbidimap"
+import "github.com/alexandrestein/gods/maps/hashbidimap"
 
 // HashBidiMapExample to demonstrate basic usage of HashMap
 func HashBidiMapExample() {

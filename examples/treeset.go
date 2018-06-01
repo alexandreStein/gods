@@ -4,7 +4,7 @@
 
 package examples
 
-import "github.com/alexandreStein/gods/sets/treeset"
+import "github.com/alexandrestein/gods/sets/treeset"
 
 // TreeSetExample to demonstrate basic usage of TreeSet
 func TreeSetExample() {
